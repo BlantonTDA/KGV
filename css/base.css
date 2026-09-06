@@ -1,0 +1,144 @@
+/* ==========================================================================
+   KGV — Base / Reset / Typography
+   ========================================================================== */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+img, video { max-width: 100%; display: block; }
+
+a { color: inherit; text-decoration: none; }
+
+ul { list-style: none; margin: 0; padding: 0; }
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.08;
+  margin: 0 0 var(--space-sm);
+  letter-spacing: -0.02em;
+}
+
+h1 { font-size: clamp(3rem, 9vw, 8rem); font-weight: 800; }
+h2 { font-size: clamp(2rem, 4.5vw, 3.25rem); }
+h3 { font-size: clamp(1.25rem, 2.2vw, 1.75rem); }
+
+p { margin: 0 0 var(--space-sm); color: var(--text-secondary); }
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: var(--space-sm);
+}
+
+.eyebrow::before {
+  content: '';
+  width: 24px;
+  height: 1px;
+  background: var(--accent);
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-pad);
+}
+
+.section {
+  padding-block: var(--space-3xl);
+  position: relative;
+}
+
+.section-light {
+  background: var(--bg-light);
+  color: var(--text-onlight);
+  --accent: var(--color-gold-deep); /* richer gold reads better on the light background */
+}
+.section-light p:not(.eyebrow) { color: #5c5648; }
+.section-light h2, .section-light h3 { color: var(--color-black); }
+
+.text-center { text-align: center; }
+
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
+}
+
+::selection { background: var(--accent); color: var(--color-black); }
+
+/* Scrollbar (webkit) */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--bg-primary); }
+::-webkit-scrollbar-thumb { background: var(--color-gold-deep); border-radius: 10px; }
+
+/* ==========================================================================
+   Responsive system
+   ========================================================================== */
+
+/* Two-column layout used across About/Services/Contact/Home split sections.
+   The column ratio is passed per-instance via --split-ratio (inline style),
+   so this one class controls the actual grid-template-columns property —
+   which means the mobile media query below can reliably override it.
+   (An inline `style="grid-template-columns:..."` on the element itself
+   would always win over any external stylesheet rule, watch/media query
+   included, so the ratio has to travel as a custom property instead.) */
+.split-grid {
+  display: grid;
+  grid-template-columns: var(--split-ratio, 1fr 1fr);
+  gap: var(--split-gap, var(--space-lg));
+  align-items: var(--split-align, center);
+}
+
+@media (max-width: 780px) {
+  .split-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+  .split-grid > [style*="order:2"],
+  .split-grid > [style*="order: 2"] {
+    /* the inline order:2 is a normal-priority inline declaration, which
+       beats a normal external rule regardless of selector specificity —
+       !important is required here to actually win the override. */
+    order: -1 !important;
+  }
+}
+
+/* Safety net: any grid built with an inline minmax() (product/badge/stat
+   grids) still has a per-column floor width that can overflow a very
+   narrow viewport. Below phone width, collapse everything to one column
+   so nothing has to scroll sideways — down to smartwatch-class screens. */
+@media (max-width: 480px) {
+  [style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+  }
+  .container {
+    padding-inline: 1rem;
+  }
+}
+
+@media (max-width: 260px) {
+  html { font-size: 14px; }
+  .container { padding-inline: 0.75rem; }
+  .btn { padding: 0.7rem 1.25rem; font-size: 0.8rem; }
+}
