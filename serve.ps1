@@ -12,7 +12,7 @@ Write-Host "Serving $root at $prefix (Ctrl+C to stop)"
 $mime = @{
   ".html"="text/html"; ".htm"="text/html"; ".css"="text/css"; ".js"="application/javascript";
   ".json"="application/json"; ".png"="image/png"; ".jpg"="image/jpeg"; ".jpeg"="image/jpeg";
-  ".gif"="image/gif"; ".svg"="image/svg+xml"; ".ico"="image/x-icon"; ".woff"="font/woff"; ".woff2"="font/woff2";
+  ".gif"="image/gif"; ".pdf"="application/pdf"; ".svg"="image/svg+xml"; ".ico"="image/x-icon"; ".woff"="font/woff"; ".woff2"="font/woff2";
 }
 
 try {

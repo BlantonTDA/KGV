@@ -13,10 +13,11 @@ body {
   background: var(--bg-primary);
   color: var(--text-primary);
   font-family: var(--font-body);
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  overflow-wrap: anywhere; /* long emails or words wrap instead of widening the page */
 }
 
 img, video { max-width: 100%; display: block; }
@@ -33,9 +34,9 @@ h1, h2, h3, h4 {
   letter-spacing: -0.02em;
 }
 
-h1 { font-size: clamp(3rem, 9vw, 8rem); font-weight: 800; }
-h2 { font-size: clamp(2rem, 4.5vw, 3.25rem); }
-h3 { font-size: clamp(1.25rem, 2.2vw, 1.75rem); }
+h1 { font-size: clamp(2.1rem, 9vw, 8rem); font-weight: 800; }
+h2 { font-size: clamp(1.6rem, 4.5vw, 3.25rem); }
+h3 { font-size: clamp(1.1rem, 2.2vw, 1.75rem); }
 
 p { margin: 0 0 var(--space-sm); color: var(--text-secondary); }
 
@@ -51,12 +52,6 @@ p { margin: 0 0 var(--space-sm); color: var(--text-secondary); }
   margin-bottom: var(--space-sm);
 }
 
-.eyebrow::before {
-  content: '';
-  width: 24px;
-  height: 1px;
-  background: var(--accent);
-}
 
 .container {
   width: 100%;
@@ -112,7 +107,9 @@ p { margin: 0 0 var(--space-sm); color: var(--text-secondary); }
 
 @media (max-width: 780px) {
   .split-grid {
-    grid-template-columns: 1fr;
+    /* minmax(0, 1fr): a plain 1fr track grows to its widest content, which
+       pushes the whole page sideways on narrow screens */
+    grid-template-columns: minmax(0, 1fr);
     gap: var(--space-md);
   }
   .split-grid > [style*="order:2"],
@@ -130,7 +127,7 @@ p { margin: 0 0 var(--space-sm); color: var(--text-secondary); }
    so nothing has to scroll sideways — down to smartwatch-class screens. */
 @media (max-width: 480px) {
   [style*="grid-template-columns"] {
-    grid-template-columns: 1fr !important;
+    grid-template-columns: minmax(0, 1fr) !important;
   }
   .container {
     padding-inline: 1rem;
@@ -138,7 +135,46 @@ p { margin: 0 0 var(--space-sm); color: var(--text-secondary); }
 }
 
 @media (max-width: 260px) {
-  html { font-size: 14px; }
+  html { font-size: 13px; }
   .container { padding-inline: 0.75rem; }
   .btn { padding: 0.7rem 1.25rem; font-size: 0.8rem; }
+}
+
+/* Stat captions need a darker tone on the white sections */
+.section-light .stat__label { color: #5c5648; }
+
+/* Badges on white sections */
+.section-light .badge { color: #3b372d; border-color: rgba(10,10,10,0.25); }
+
+/* ==========================================================================
+   Fluid type and spacing for phones and watches.
+   Everything is sized in rem, so shrinking the root size scales the whole
+   page together. The !important rules beat sizes written inline in the HTML.
+   ========================================================================== */
+@media (max-width: 600px) {
+  html { font-size: 15px; }
+  h1[style*="font-size"] { font-size: clamp(1.9rem, 8.5vw, 2.6rem) !important; }
+  h2[style*="font-size"] { font-size: clamp(1.5rem, 6.5vw, 1.9rem) !important; }
+  h3[style*="font-size"] { font-size: 1.05rem !important; }
+  p[style*="font-size"]  { font-size: 1rem !important; }
+  .hero__subtitle { padding: 0.8rem 1rem; }
+}
+@media (max-width: 400px) {
+  html { font-size: 14px; }
+}
+@media (max-width: 320px) {
+  html { font-size: 13px; }
+}
+@media (max-width: 240px) {
+  html { font-size: 12px; }
+  h1, h1[style*="font-size"] { font-size: 1.5rem !important; }
+  h2, h2[style*="font-size"] { font-size: 1.25rem !important; }
+  h3, h3[style*="font-size"] { font-size: 1rem !important; }
+}
+
+/* Photo that stays pinned beside long text on desktop; on one column layouts
+   it must scroll normally or the text slides over it */
+.sticky-desktop { position: sticky; top: 110px; }
+@media (max-width: 780px) {
+  .sticky-desktop { position: static; }
 }

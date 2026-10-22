@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About — KGV | King Global Ventures</title>
+<title>About | KGV | King Global Ventures</title>
 <meta name="description" content="Learn about King Global Ventures, its mission, leadership, and international accreditations.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,7 +22,7 @@
 <header class="navbar is-scrolled">
   <div class="container navbar__inner">
     <a href="index.html" class="navbar__logo">
-      <img src="images/logo/kgv-logo-full.png" alt="KGV — King Global Ventures Holdings LLC" class="navbar__logo-img">
+      <img src="images/logo/kgv-logo-full.png" alt="KGV, King Global Ventures Holdings LLC" class="navbar__logo-img">
     </a>
     <nav class="navbar__links">
       <a href="index.html" data-page="home">Home</a>
@@ -31,32 +31,99 @@
       <a href="contact.html" data-page="contact">Contact</a>
     </nav>
     <button class="navbar__toggle" aria-label="Toggle menu" aria-expanded="false">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      <i class="fa-solid fa-bars"></i>
     </button>
   </div>
 </header>
 
 <!-- ===================== PAGE HEADER ===================== -->
 <section class="section" style="padding-top:calc(var(--space-3xl) + 3rem);">
-  <div class="container reveal" style="max-width:760px;">
-    <p class="eyebrow">About KGV</p>
-    <h1 style="font-size:clamp(2.5rem,6vw,4.5rem);">The company behind the ventures.</h1>
-    <p style="font-size:1.15rem;">King Global Ventures (KGV) is the parent company harnessing natural materials into products that serve agriculture, sanitation, and land care — through independently branded ventures built on one shared mission.</p>
+  <div class="container split-grid" style="--split-ratio:1.1fr 0.9fr; --split-gap:3rem;">
+    <div class="reveal">
+      <p class="eyebrow">About KGV</p>
+      <h1 style="font-size:clamp(2.25rem,4.6vw,3.6rem);">The company behind the ventures.</h1>
+      <p style="font-size:1.15rem;">King Global Ventures (KGV) is a holding company. Under its auspices sit a family of organic brands, a spraying and home care service, a foundation, and an engineering firm, each with its own identity and all on one shared mission.</p>
+    </div>
+    <div class="reveal brand-mosaic">
+      <img src="images/products/apex-10.jpg" alt="APEX10 organic fertilizer">
+      <img src="images/products/sanihancer.jpg" alt="Sanihancer septic and poultry care">
+      <img src="images/products/organic-super-mulch.jpeg" alt="Organic Super Mulch">
+      <img src="images/products/apex10-fresh.png" alt="Apex10 Fresh produce">
+      <img src="images/products/door2door-services.jpg" alt="Door2Door Services spraying and home care">
+      <img src="images/products/denkyem-foundation.jpg" alt="Denkyem Foundation" style="object-position:center 25%;">
+    </div>
   </div>
 </section>
 
 <!-- ===================== MISSION ===================== -->
-<section class="section section-light">
-  <div class="container split-grid" style="--split-ratio:1fr 1fr; --split-gap:3rem;">
+<section class="section section-light" id="mission">
+  <div class="container">
+   <div class="split-grid" style="--split-ratio:1.15fr 0.85fr; --split-gap:3rem;">
     <div class="reveal">
       <p class="eyebrow">Our Mission</p>
       <h2 style="font-size:2.25rem;">Why we exist</h2>
-      <p style="font-size:1.1rem;">To harness the power of natural materials to promote world food production, environmental stewardship, operational efficiency, sustainability, and a healthier workplace — while being cost-effective and socially responsible in creating business opportunities.</p>
+      <p style="font-size:1.2rem; color:var(--color-black);">To drive sustainable growth and economic development by delivering innovative solutions in agriculture and agribusiness, environmental health, engineering, and logistics that empower communities and create long term value.</p>
+
+      <h3 style="font-size:1.05rem; margin-top:2rem;">Supporting commitments</h3>
+      <p>To harness the power of natural materials to promote world food production, environmental stewardship, operational efficiency, sustainability, and a healthier workplace, while being cost effective and socially responsible in creating business opportunities.</p>
+      <p>To deliver engineering and social engineering consulting, together with equipment sales, rentals and referrals, that support agriculture, mining, ports, construction, roads, highways and bridges.</p>
     </div>
-    <div class="reveal" style="display:grid; gap:1.5rem;">
-      <div class="stat"><div class="stat__num" style="color:var(--color-gold-deep);"><i class="fa-solid fa-leaf"></i></div><div class="stat__label" style="color:#5c5648;">Environmental stewardship</div></div>
-      <div class="stat"><div class="stat__num" style="color:var(--color-gold-deep);"><i class="fa-solid fa-wheat-awn"></i></div><div class="stat__label" style="color:#5c5648;">World food production</div></div>
-      <div class="stat"><div class="stat__num" style="color:var(--color-gold-deep);"><i class="fa-solid fa-gears"></i></div><div class="stat__label" style="color:#5c5648;">Operational efficiency</div></div>
+    <div class="reveal venture-media">
+      <img src="images/about/farmer.jpg" alt="Smiling farmer in his field in Nigeria">
+    </div>
+   </div>
+  </div>
+</section>
+
+<!-- ===================== VISION ===================== -->
+<section class="section" id="vision">
+  <div class="container">
+    <div class="split-grid" style="--split-ratio:0.9fr 1.1fr; --split-gap:3rem;">
+      <div class="reveal venture-media">
+        <img src="images/about/vision-farmland-trees.jpg" alt="Vegetable plots growing between shade trees beside a village in Burkina Faso">
+      </div>
+      <div class="reveal">
+        <p class="eyebrow">Our Vision</p>
+        <h2>Where we're going</h2>
+        <p style="font-size:1.2rem; color:var(--text-primary);">To build and scale market leading enterprises that power sustainable industrial growth and regional development across West Africa.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CORE VALUES ===================== -->
+<section class="section section-light" id="values">
+  <div class="container">
+    <div class="reveal text-center" style="max-width:640px; margin-inline:auto;">
+      <p class="eyebrow" style="justify-content:center;">Core Values</p>
+      <h2>What we stand on</h2>
+    </div>
+
+    <div class="reveal-stagger" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1.5rem; margin-top:2.5rem;">
+      <div class="card reveal" style="background:var(--color-white); border-color:#eee2be;">
+        <div style="font-size:1.75rem; color:var(--accent); margin-bottom:0.75rem;"><i class="fa-solid fa-scale-balanced"></i></div>
+        <span class="card-product__tag">Our foundation</span>
+        <h3>Integrity</h3>
+        <p><em>Can we be trusted to do the right thing when no one is watching, when it is costly, or when no rule forces us to?</em> Integrity keeps us aligned with the principles and standards KGV has set, and keeps our communication and reporting honest and consistent under pressure.</p>
+      </div>
+      <div class="card reveal" style="background:var(--color-white); border-color:#eee2be;">
+        <div style="font-size:1.75rem; color:var(--accent); margin-bottom:0.75rem;"><i class="fa-solid fa-people-group"></i></div>
+        <span class="card-product__tag">Our engine</span>
+        <h3>People</h3>
+        <p><em>How do we treat the individuals who work for us?</em> We put the safety of our workforce, workplace dignity and employee retention first.</p>
+      </div>
+      <div class="card reveal" style="background:var(--color-white); border-color:#eee2be;">
+        <div style="font-size:1.75rem; color:var(--accent); margin-bottom:0.75rem;"><i class="fa-solid fa-diagram-project"></i></div>
+        <span class="card-product__tag">Our systems</span>
+        <h3>Process</h3>
+        <p><em>Are our results repeatable, scalable and built on reliable systems, or do they depend on luck and individual heroics?</em> Dependable systems keep our operations consistent through staff turnover and changes in leadership.</p>
+      </div>
+      <div class="card reveal" style="background:var(--color-white); border-color:#eee2be;">
+        <div style="font-size:1.75rem; color:var(--accent); margin-bottom:0.75rem;"><i class="fa-solid fa-hand-holding-heart"></i></div>
+        <span class="card-product__tag">The outcome</span>
+        <h3>Community Impact</h3>
+        <p><em>How does our business improve the places where we operate?</em> We focus on community development and environmental responsibility, empowering farmers through farmer centric programs and creating results that can be seen and measured.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -64,7 +131,7 @@
 <!-- ===================== LEADERSHIP ===================== -->
 <section class="section" id="leadership">
   <div class="container split-grid" style="--split-ratio:0.85fr 1.15fr; --split-gap:3rem; --split-align:start;">
-    <div class="reveal" style="position:sticky; top:110px;">
+    <div class="reveal sticky-desktop">
       <div style="aspect-ratio:4/5; border-radius:var(--radius-lg); overflow:hidden;">
         <img src="images/team/king-ohene-asomaning.jpeg" alt="King Ohene Asomaning, Founder &amp; CEO of KGV" style="width:100%; height:100%; object-fit:cover; object-position:top;">
       </div>
@@ -72,19 +139,19 @@
     <div class="reveal">
       <p class="eyebrow">Leadership Profile</p>
       <h2>King Ohene Asomaning</h2>
-      <p style="color:var(--accent); font-weight:600; font-size:1.05rem;">Founder &amp; CEO — KGV Limited / APEX-10 Africa</p>
+      <p style="color:var(--accent); font-weight:600; font-size:1.05rem;">Founder &amp; CEO, KGV Limited / APEX10 Africa</p>
 
       <div class="card" style="margin-top:1.5rem;">
         <h3 style="margin-bottom:0.75rem;">Brief Profile</h3>
-        <p>King Ohene Asomaning is the CEO of KGV Limited and APEX-10 Africa. He holds a Master's in Public Administration, a Bachelor's in Commerce &amp; Engineering, and Associate Degrees in Electronics Engineering, Mechanical Engineering, and Business Administration.</p>
+        <p>King Ohene Asomaning is the CEO of KGV Limited and APEX10 Africa. He holds a Master's in Public Administration, a Bachelor's in Commerce &amp; Engineering, and Associate Degrees in Electronics Engineering, Mechanical Engineering, and Business Administration.</p>
       </div>
 
       <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1rem; margin-top:1.5rem;">
-        <div class="badge">🎓 M.A. Public Administration</div>
-        <div class="badge">🎓 B. Commerce &amp; Engineering</div>
-        <div class="badge">🎓 A.A. Electronics Engineering</div>
-        <div class="badge">🎓 A.A. Mechanical Engineering</div>
-        <div class="badge">🎓 A.A. Business Administration</div>
+        <div class="badge"><i class="fa-solid fa-graduation-cap"></i> M.A. Public Administration</div>
+        <div class="badge"><i class="fa-solid fa-graduation-cap"></i> B. Commerce &amp; Engineering</div>
+        <div class="badge"><i class="fa-solid fa-graduation-cap"></i> A.A. Electronics Engineering</div>
+        <div class="badge"><i class="fa-solid fa-graduation-cap"></i> A.A. Mechanical Engineering</div>
+        <div class="badge"><i class="fa-solid fa-graduation-cap"></i> A.A. Business Administration</div>
       </div>
     </div>
   </div>
@@ -93,16 +160,41 @@
 <!-- ===================== ACCREDITATIONS ===================== -->
 <section class="section section-light" id="accreditations">
   <div class="container">
-    <div class="reveal text-center" style="max-width:640px; margin-inline:auto;">
-      <p class="eyebrow" style="justify-content:center;">Recognition</p>
-      <h2>International Accreditations</h2>
-      <p>Certification badges will be displayed here once supplied.</p>
+    <div class="split-grid" style="--split-ratio:1.1fr 0.9fr; --split-gap:3rem;">
+      <div class="reveal">
+        <p class="eyebrow">Recognition</p>
+        <h2>Accreditations and standing</h2>
+        <p style="font-size:1.1rem;">The certifications and registrations behind APEX10 and KGV.</p>
+      </div>
+      <div class="reveal venture-media">
+        <img src="images/about/accreditation-ghana-cocoa.jpg" alt="Farmer's hands sorting freshly dried cocoa beans in Ghana">
+      </div>
     </div>
-    <div class="reveal-stagger" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:1.5rem; margin-top:2.5rem;">
-      <div class="card reveal text-center" style="padding:1.5rem;">Accreditation 1</div>
-      <div class="card reveal text-center" style="padding:1.5rem;">Accreditation 2</div>
-      <div class="card reveal text-center" style="padding:1.5rem;">Accreditation 3</div>
-      <div class="card reveal text-center" style="padding:1.5rem;">Accreditation 4</div>
+    <div class="reveal-stagger" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1.5rem; margin-top:2.5rem;">
+      <div class="card card-col reveal" style="background:var(--color-white); border-color:#eee2be;">
+        <div class="logo-badge"><img src="images/logo/partner-omri-listed.png" alt="OMRI Listed"></div>
+        <span class="card-product__tag">Organic</span>
+        <h3 style="font-size:1.15rem;">OMRI Listed</h3>
+        <p>APEX10 is OMRI Listed for use in organic production.</p>
+        <a href="docs/omri-certificate-apex10.pdf" target="_blank" rel="noopener" class="btn btn-dark">View certificate <i class="fa-solid fa-file-pdf fa-xs"></i></a>
+      </div>
+      <div class="card card-col reveal" style="background:var(--color-white); border-color:#eee2be;">
+        <span class="card-product__tag">Company</span>
+        <h3 style="font-size:1.15rem;">Registered in Ghana</h3>
+        <p>KGV Limited was established in 2017 and is registered with the Registrar General's Department as a limited liability company (CS166212017).</p>
+      </div>
+      <div class="card card-col reveal" style="background:var(--color-white); border-color:#eee2be;">
+        <div class="logo-badge"><img src="images/logo/partner-jsh-international.png" alt="JSH International"></div>
+        <span class="card-product__tag">Distribution</span>
+        <h3 style="font-size:1.15rem;">Sole distributor of APEX10</h3>
+        <p>KGV partners with JSH International, the parent company of Nature's Wonder, to supply APEX10 to Ghana and other West African countries.</p>
+      </div>
+      <div class="card card-col reveal" style="background:var(--color-white); border-color:#eee2be;">
+        <div class="logo-badge"><img src="images/logo/partner-natures-wonder.png" alt="Nature's Wonder"></div>
+        <span class="card-product__tag">Technology</span>
+        <h3 style="font-size:1.15rem;">Patented extraction process</h3>
+        <p>APEX10 is a bio stimulant and soil amendment made from 10,000 year old peat, using the manufacturer's patented extraction process.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -110,31 +202,66 @@
 <!-- ===================== TEST RESULTS ===================== -->
 <section class="section" id="testing">
   <div class="container">
-    <div class="reveal text-center" style="max-width:640px; margin-inline:auto;">
-      <p class="eyebrow" style="justify-content:center;">Validated</p>
-      <h2>International Product Testing</h2>
-      <p>Lab and field test results validating our products against international standards will be showcased here.</p>
+    <div class="split-grid" style="--split-ratio:0.9fr 1.1fr; --split-gap:3rem;">
+      <div class="reveal venture-media">
+        <img src="images/about/field-trials.jpg" alt="African farmers working the soil in a field trial plot">
+      </div>
+      <div class="reveal">
+        <p class="eyebrow">Validated</p>
+        <h2>International studies and trials</h2>
+        <p style="font-size:1.1rem;">University and laboratory studies, plus field trials in Ghana and Togo. The studies were published by Nature's Wonder, the manufacturer of APEX10, and copies are kept here for reference.</p>
+      </div>
     </div>
-    <div class="reveal-stagger" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1.5rem; margin-top:2.5rem;">
-      <div class="card reveal">
-        <span class="card-product__tag">APEX-10</span>
-        <h3 style="font-size:1.1rem;">Test Certificate</h3>
-        <p>Summary of test result pending upload.</p>
+    <div class="reveal-stagger" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1.5rem; margin-top:2.5rem;">
+      <div class="card card-col reveal">
+        <span class="card-product__tag">Virginia Tech</span>
+        <h3 style="font-size:1.1rem;">Productivity during drought</h3>
+        <p>Research into how APEX10 supports crop and plant productivity under drought conditions.</p>
+        <div class="btn-row">
+          <a href="docs/study-virginia-tech-drought-highlights.pdf" target="_blank" rel="noopener" class="btn btn-outline">Read highlights <i class="fa-solid fa-file-pdf fa-xs"></i></a>
+          <a href="docs/study-virginia-tech-drought-full.pdf" target="_blank" rel="noopener" class="btn btn-outline">Full paper <i class="fa-solid fa-file-pdf fa-xs"></i></a>
+        </div>
       </div>
-      <div class="card reveal">
-        <span class="card-product__tag">Apex10 Fresh</span>
-        <h3 style="font-size:1.1rem;">Test Certificate</h3>
-        <p>Summary of test result pending upload.</p>
+      <div class="card card-col reveal">
+        <span class="card-product__tag">Virginia Tech</span>
+        <h3 style="font-size:1.1rem;">Root development</h3>
+        <p>Research into the effect of APEX10 on root development.</p>
+        <a href="docs/study-virginia-tech-root-development.pdf" target="_blank" rel="noopener" class="btn btn-outline">Read study <i class="fa-solid fa-file-pdf fa-xs"></i></a>
       </div>
-      <div class="card reveal">
-        <span class="card-product__tag">Sanihancer</span>
-        <h3 style="font-size:1.1rem;">Test Certificate</h3>
-        <p>Summary of test result pending upload.</p>
+      <div class="card card-col reveal">
+        <span class="card-product__tag">Rutgers University</span>
+        <h3 style="font-size:1.1rem;">Fertilizer reduction</h3>
+        <p>Research into the effect of APEX10 on fertilizer efficiency and reduced fertilizer use.</p>
+        <a href="docs/study-rutgers-fertilizer-reduction.pdf" target="_blank" rel="noopener" class="btn btn-outline">Read study <i class="fa-solid fa-file-pdf fa-xs"></i></a>
       </div>
-      <div class="card reveal">
-        <span class="card-product__tag">Organic Super Mulch</span>
-        <h3 style="font-size:1.1rem;">Test Certificate</h3>
-        <p>Summary of test result pending upload.</p>
+      <div class="card card-col reveal">
+        <span class="card-product__tag">Rutgers University</span>
+        <h3 style="font-size:1.1rem;">Reduced fertility and irrigation</h3>
+        <p>Research into crop performance under reduced fertility and irrigation regimes.</p>
+        <a href="docs/study-rutgers-reduced-fertility-irrigation.pdf" target="_blank" rel="noopener" class="btn btn-outline">Read study <i class="fa-solid fa-file-pdf fa-xs"></i></a>
+      </div>
+      <div class="card card-col reveal">
+        <span class="card-product__tag">Soil Foodweb</span>
+        <h3 style="font-size:1.1rem;">Soil quality</h3>
+        <p>Soil biology analysis of the effect of APEX10 on soil quality.</p>
+        <a href="docs/study-soil-foodweb-soil-quality.pdf" target="_blank" rel="noopener" class="btn btn-outline">Read study <i class="fa-solid fa-file-pdf fa-xs"></i></a>
+      </div>
+      <div class="card card-col reveal">
+        <span class="card-product__tag">International</span>
+        <h3 style="font-size:1.1rem;">Field studies presentation</h3>
+        <p>A presentation of APEX10 field studies across crops and regions.</p>
+        <a href="docs/field-studies-presentation.pdf" target="_blank" rel="noopener" class="btn btn-outline">View presentation <i class="fa-solid fa-file-pdf fa-xs"></i></a>
+      </div>
+      <div class="card card-col reveal">
+        <span class="card-product__tag">Togo</span>
+        <h3 style="font-size:1.1rem;">Technical report</h3>
+        <p>Technical report on the use of APEX10 in Togo (in French).</p>
+        <a href="docs/technical-report-togo.pdf" target="_blank" rel="noopener" class="btn btn-outline">Read report <i class="fa-solid fa-file-pdf fa-xs"></i></a>
+      </div>
+      <div class="card card-col reveal">
+        <span class="card-product__tag">Ghana</span>
+        <h3 style="font-size:1.1rem;">Ministry of Food and Agriculture rice trial</h3>
+        <p>A rice trial at the Adugyama irrigation site in the Ahafo Ano South East District.</p>
       </div>
     </div>
   </div>
@@ -143,26 +270,36 @@
 <!-- ===================== NEWS & ACHIEVEMENTS ===================== -->
 <section class="section section-light" id="news">
   <div class="container">
-    <div class="reveal text-center" style="max-width:640px; margin-inline:auto;">
-      <p class="eyebrow" style="justify-content:center;">Press</p>
-      <h2>News &amp; Achievements</h2>
-      <p>Articles and press coverage of KGV's milestones will appear here as they're provided.</p>
+    <div class="split-grid" style="--split-ratio:1.1fr 0.9fr; --split-gap:3rem;">
+      <div class="reveal">
+        <p class="eyebrow">Milestones</p>
+        <h2>News &amp; Achievements</h2>
+        <p style="font-size:1.1rem;">A short record of KGV's milestones. New announcements and press coverage will be added here as they happen.</p>
+      </div>
+      <div class="reveal venture-media">
+        <img src="images/about/milestones-harvest.jpg" alt="Smiling African farmers with a tomato harvest in a Nigerian field">
+      </div>
     </div>
     <div class="reveal-stagger" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1.75rem; margin-top:2.5rem;">
       <div class="card reveal" style="background:var(--color-white); border-color:#eee2be;">
-        <span class="card-product__tag">Article</span>
-        <h3 style="font-size:1.1rem; color:var(--color-black);">Headline pending</h3>
-        <p style="color:#5c5648;">Short excerpt of the article will go here.</p>
+        <span class="card-product__tag">2017</span>
+        <h3 style="font-size:1.1rem; color:var(--color-black);">KGV Limited is established</h3>
+        <p style="color:#5c5648;">Registered with the Registrar General's Department as a limited liability company for general trading, farming, and imports and exports.</p>
       </div>
       <div class="card reveal" style="background:var(--color-white); border-color:#eee2be;">
-        <span class="card-product__tag">Award</span>
-        <h3 style="font-size:1.1rem; color:var(--color-black);">Headline pending</h3>
-        <p style="color:#5c5648;">Short excerpt of the article will go here.</p>
+        <span class="card-product__tag">Distribution</span>
+        <h3 style="font-size:1.1rem; color:var(--color-black);">Sole distributor of APEX10</h3>
+        <p style="color:#5c5648;">KGV and JSH International partner to supply APEX10 to Ghana and other West African countries.</p>
       </div>
       <div class="card reveal" style="background:var(--color-white); border-color:#eee2be;">
-        <span class="card-product__tag">Feature</span>
-        <h3 style="font-size:1.1rem; color:var(--color-black);">Headline pending</h3>
-        <p style="color:#5c5648;">Short excerpt of the article will go here.</p>
+        <span class="card-product__tag">Ghana trial</span>
+        <h3 style="font-size:1.1rem; color:var(--color-black);">Trial with the Ministry of Food and Agriculture</h3>
+        <p style="color:#5c5648;">APEX10 was tested on rice at the Adugyama irrigation site, with the Ministry's director, a district extension officer and a local rice farmer present.</p>
+      </div>
+      <div class="card reveal" style="background:var(--color-white); border-color:#eee2be;">
+        <span class="card-product__tag">Certification</span>
+        <h3 style="font-size:1.1rem; color:var(--color-black);">OMRI Listed</h3>
+        <p style="color:#5c5648;">APEX10 is OMRI Listed for use in organic production. The certificate is available in our accreditations above.</p>
       </div>
     </div>
   </div>
@@ -173,16 +310,18 @@
   <div class="container">
     <div class="footer__grid">
       <div class="footer__col">
-        <img src="images/logo/kgv-logo-full.png" alt="KGV — King Global Ventures Holdings LLC" class="footer__logo-img">
-        <p>Harnessing the power of natural materials for a more sustainable, food-secure world.</p>
+        <img src="images/logo/kgv-logo-full.png" alt="KGV, King Global Ventures Holdings LLC" class="footer__logo-img">
+        <p>Harnessing the power of natural materials for a more sustainable, food secure world.</p>
       </div>
       <div class="footer__col">
         <h4>Ventures</h4>
-        <a href="https://apex10africa.com/" target="_blank" rel="noopener">APEX-10 ↗</a>
+        <a href="https://apex10africa.com/" target="_blank" rel="noopener">APEX10 <i class="fa-solid fa-arrow-up-right-from-square fa-xs"></i></a>
         <a href="services.html">Apex10 Fresh</a>
-        <a href="https://sanihancer.net/" target="_blank" rel="noopener">Sanihancer ↗</a>
+        <a href="https://sanihancer.net/" target="_blank" rel="noopener">Sanihancer <i class="fa-solid fa-arrow-up-right-from-square fa-xs"></i></a>
         <a href="services.html">Organic Super Mulch</a>
         <a href="services.html">Denkyem Foundation</a>
+        <a href="services.html#door2door">Door2Door Services</a>
+        <a href="services.html#kgv-engineering">KGV Engineering</a>
       </div>
       <div class="footer__col">
         <h4>Company</h4>
@@ -192,27 +331,30 @@
       </div>
       <div class="footer__col">
         <h4>Contact</h4>
-        <p>info@kgvltd.com</p>
-        <p>+233 000 000 000</p>
+        <a href="mailto:king@kingglobalventures.com" class="contact-line"><i class="fa-solid fa-envelope"></i> king@kingglobalventures.com</a>
+        <a href="tel:+233558764634" class="contact-line"><i class="fa-solid fa-phone"></i> +233 55 876 4634 (Ghana)</a>
+        <a href="tel:+16092278043" class="contact-line"><i class="fa-solid fa-phone"></i> +1 (609) 227 8043 (USA)</a>
+        <p><i class="fa-solid fa-location-dot"></i> Tema Road at Afienya, Greater Accra Region, Ghana</p>
+        <div class="social-row"><a href="https://web.facebook.com/share/g/1CZ27jsXUj/" target="_blank" rel="noopener" aria-label="KGV on Facebook"><i class="fa-brands fa-facebook-f"></i></a><a href="https://www.instagram.com/apex10_africa/" target="_blank" rel="noopener" aria-label="APEX10 Africa on Instagram"><i class="fa-brands fa-instagram"></i></a><a href="https://www.youtube.com/channel/UCm8UO78SeTlbEf4gYSv48Wg" target="_blank" rel="noopener" aria-label="KGV on YouTube"><i class="fa-brands fa-youtube"></i></a><a href="mailto:king@kingglobalventures.com" aria-label="Email king@kingglobalventures.com"><i class="fa-solid fa-envelope"></i></a></div>
       </div>
     </div>
     <div class="footer__bottom">
       <span>&copy; <span data-year></span> King Global Ventures (KGV). All rights reserved.</span>
-      <span>Ventures: APEX-10 · Apex10 Fresh · Sanihancer · Organic Super Mulch · Denkyem Foundation</span>
+      <span>Ventures: APEX10, Apex10 Fresh, Sanihancer, Organic Super Mulch, Door2Door, Denkyem Foundation, KGV Engineering</span>
     </div>
   </div>
 </footer>
 
 <button class="chatbot-launcher" id="chatbotLauncher" aria-label="Open chat" aria-expanded="false">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+  <i class="fa-solid fa-comments"></i>
 </button>
 <div class="chatbot-window" id="chatbotWindow">
   <div class="chatbot-window__header">
     <strong>KGV Assistant</strong>
-    <button class="chatbot-window__close" id="chatbotClose" aria-label="Close chat">✕</button>
+    <button class="chatbot-window__close" id="chatbotClose" aria-label="Close chat"><i class="fa-solid fa-xmark"></i></button>
   </div>
   <div class="chatbot-window__body" id="chatbotBody"></div>
-  <div class="chatbot-window__footer">Guided contact routing — no AI, no data leaves this page.</div>
+  <div class="chatbot-window__footer">Guided contact routing. No AI, no data leaves this page.</div>
 </div>
 
 <script src="js/main.js"></script>

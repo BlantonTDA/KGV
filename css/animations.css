@@ -47,7 +47,7 @@
 }
 
 .hero__title {
-  font-size: clamp(3.5rem, 12vw, 10rem);
+  font-size: clamp(2.5rem, 12vw, 10rem);
   font-weight: 800;
   color: var(--color-offwhite);
   text-shadow: 0 10px 40px rgba(0,0,0,0.5);
@@ -58,7 +58,7 @@
 /* Full company name is much longer than a single word like "Travel" —
    scale it down so it reads as a bold headline instead of overflowing. */
 .hero__title--long {
-  font-size: clamp(2rem, 6.5vw, 5rem);
+  font-size: clamp(1.7rem, 6.5vw, 5rem);
   line-height: 1.08;
   margin-bottom: 2.75rem;
 }
@@ -80,11 +80,17 @@
 }
 
 .hero__subtitle {
+  font-family: 'Poppins', var(--font-body);
+  font-weight: 400;
   font-size: clamp(0.8125rem, 1.6vw, 1.0625rem);
-  line-height: 1.35;
-  color: var(--color-offwhite);
-  opacity: 0.9;
-  max-width: 620px;
+  line-height: 1.4;
+  /* Same gold gradient and glow as the .btn-gold buttons, with black text */
+  background: linear-gradient(135deg, var(--color-gold-bright), var(--color-gold-deep));
+  color: var(--color-black);
+  box-shadow: var(--shadow-gold-glow);
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius-md);
+  max-width: 660px;
   margin-inline: auto;
   margin-bottom: var(--space-md);
 }
@@ -95,7 +101,7 @@
 
 /* On very narrow phones the phrase no longer fits on one line even at the
    smallest font size — let it wrap there rather than clipping off-screen. */
-@media (max-width: 400px) {
+@media (max-width: 470px) {
   .hero__subtitle .nowrap {
     white-space: normal;
   }
